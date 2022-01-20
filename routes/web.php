@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
 Route::get('/carreras/marketing', function () {
     return view('/carreras/marketing');
 });
@@ -33,3 +35,5 @@ Route::get('/carreras/administracion', function () {
 Route::get('/carreras/contabilidad', function () {
     return view('/carreras/contabilidad');
 });
+Route::resource('students', App\Http\Controllers\StudentController::class);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
