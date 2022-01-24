@@ -23,11 +23,11 @@ class Student extends Model
 {
     
     static $rules = [
-		'document' => 'required',
-		'name' => 'required',
-		'last_name' => 'required',
+		'document' => 'required|min:10|max:10|regex:/^[0-9]+$/',
+		'name' => 'required|alpha',
+		'last_name' => 'required|alpha',
 		'email' => 'required',
-		'phone' => 'required',
+		'phone' => 'required|min:10|max:10|regex:/^[0]{1}[0-9]{9}+$/',
     ];
 
     protected $perPage = 20;
