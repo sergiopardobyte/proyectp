@@ -35,5 +35,5 @@ Route::get('/carreras/administracion', function () {
 Route::get('/carreras/contabilidad', function () {
     return view('/carreras/contabilidad');
 });
-Route::resource('students', App\Http\Controllers\StudentController::class);
+Route::resource('students', App\Http\Controllers\StudentController::class)->middleware('auth');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
