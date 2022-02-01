@@ -37,8 +37,27 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('students.index') }}">Estudiantes</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('teacher.index') }}">Teachers</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ route('career.index') }}">Careers</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ route('subjects.index') }}">Subjects</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ route('semesters.index') }}">Semesters</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ route('modules.index') }}">Modules</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ route('section.index') }}">Section</a>
+                        </li>
                     @endif
                     </ul>
+                     
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">

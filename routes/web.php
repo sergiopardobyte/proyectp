@@ -37,3 +37,9 @@ Route::get('/carreras/contabilidad', function () {
 });
 Route::resource('students', App\Http\Controllers\StudentController::class)->middleware('auth');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('teacher', App\Http\Controllers\TeacherController::class)->middleware('auth');
+Route::resource('career', App\Http\Controllers\CareerController::class)->middleware('auth');
+Route::resource('subjects', App\Http\Controllers\SubjectController::class)->middleware('auth');
+Route::resource('semesters', App\Http\Controllers\SemesterController::class)->middleware('auth');
+Route::resource('modules', App\Http\Controllers\ModuleController::class)->middleware('auth');
+Route::resource('section', App\Http\Controllers\SectionController::class)->middleware('auth');
