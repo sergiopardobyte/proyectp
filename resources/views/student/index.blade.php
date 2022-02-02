@@ -34,7 +34,7 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <!--<th>No</th>-->
                                         
 										<th>Document</th>
 										<th>Name</th>
@@ -48,7 +48,7 @@
                                 <tbody>
                                     @foreach ($students as $student)
                                         <tr>
-                                            <td>{{ ++$i }}</td>
+                                            <!--<td>{{ ++$i }}</td>-->
                                             
 											<td>{{ $student->document }}</td>
 											<td>{{ $student->name }}</td>

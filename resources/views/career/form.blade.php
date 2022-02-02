@@ -7,7 +7,7 @@
             {!! $errors->first('name_c', '<div class="invalid-feedback">:message</p>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('duration_c') }}
+            {{ Form::label('Duración (semestres)') }}
             {{ Form::text('duration_c', $career->duration_c, ['class' => 'form-control' . ($errors->has('duration_c') ? ' is-invalid' : ''), 'placeholder' => 'Duration C']) }}
             {!! $errors->first('duration_c', '<div class="invalid-feedback">:message</p>') !!}
         </div>
