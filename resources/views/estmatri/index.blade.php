@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Semester
+    Estmatri
 @endsection
 
 @section('content')
@@ -13,11 +13,11 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Semester') }}
+                                {{ __('Estmatri') }}
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('semesters.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('estmatris.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
                               </div>
@@ -34,24 +34,26 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                      
                                         
-										<th>Nivel</th>
+                                        
+										<th>Student Id</th>
+										<th>Matricula Id</th>
 
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($semesters as $semester)
+                                    @foreach ($estmatris as $estmatri)
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $semester->nivel }}</td>
+											<td>{{ $estmatri->student_id }}</td>
+											<td>{{ $estmatri->matricula_id }}</td>
 
                                             <td>
-                                                <form action="{{ route('semesters.destroy',$semester->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('semesters.show',$semester->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('semesters.edit',$semester->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                <form action="{{ route('estmatris.destroy',$estmatri->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('estmatris.show',$estmatri->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('estmatris.edit',$estmatri->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
@@ -64,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $semesters->links() !!}
+                {!! $estmatris->links() !!}
             </div>
         </div>
     </div>

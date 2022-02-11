@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Instituto Quito</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -38,22 +38,37 @@
                         <a class="nav-link" href="{{ route('students.index') }}">Estudiantes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('teacher.index') }}">Teachers</a>
+                        <a class="nav-link" href="{{ route('teacher.index') }}">Docentes</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="{{ route('career.index') }}">Careers</a>
+                        <a class="nav-link" href="{{ route('career.index') }}">Carreras</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="{{ route('subjects.index') }}">Subjects</a>
+                        <a class="nav-link" href="{{ route('subjects.index') }}">Materias</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="{{ route('semesters.index') }}">Semesters</a>
+                        <a class="nav-link" href="{{ route('semesters.index') }}">Semestres</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="{{ route('modules.index') }}">Modules</a>
+                        <a class="nav-link" href="{{ route('modules.index') }}">Modulos</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="{{ route('section.index') }}">Section</a>
+                        <a class="nav-link" href="{{ route('section.index') }}">Seccion</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ route('pagos.index') }}">Pagos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ route('matricula.index') }}">Matricula</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ route('estmatri.index') }}">MatriculaEstudiante</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ route('estdoc.index') }}">EstudianteDocente</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="{{ route('docmate.index') }}">DocenteMateria</a>
                         </li>
                     @endif
                     </ul>

@@ -81,10 +81,10 @@ Mensaje del Rector
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                <li type="circle">MARKETING DIGITAL Y COMERCIO ELECTRÓNICO</li>
-                                <li type="circle">DESARROLLO DE SOFTWARE</li>
-                                <li type="circle">ADMINISTRACIÓN</li>
-                                <li type="circle">CONTABILIDAD Y ASESORÍA TRIBUTARIA</li>
+                                <li type="circle"><a href="https://itq.edu.ec/marketing-digital-y-comercio-electronico/">MARKETING DIGITAL Y COMERCIO ELECTRÓNICO</a></li>
+                                <li type="circle"><a href="https://itq.edu.ec/desarrollo-de-software/">DESARROLLO DE SOFTWARE</a></li>
+                                <li type="circle"><a href="https://itq.edu.ec/administracion/">ADMINISTRACIÓN</a></li>
+                                <li type="circle"><a href="https://itq.edu.ec/contabilidad-y-asesoria-tributaria/">CONTABILIDAD Y ASESORÍA TRIBUTARIA</a></li>
                                 </div>
                             </div>
                         </div>

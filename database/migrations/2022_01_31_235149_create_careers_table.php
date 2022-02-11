@@ -16,8 +16,9 @@ class CreateCareersTable extends Migration
         Schema::create('careers', function (Blueprint $table) {
             $table->id();
             $table->string('name_c');
-            $table->string('duration_c');
+            $table->integer('duration_c  digits_between:5,6');
             $table->timestamps();
+            
         });
     }
 

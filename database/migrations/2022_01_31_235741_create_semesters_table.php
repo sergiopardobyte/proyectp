@@ -15,7 +15,7 @@ class CreateSemestersTable extends Migration
     {
         Schema::create('semesters', function (Blueprint $table) {
             $table->id();
-            $table->string('nivel');
+            $table->string('nivel digits_between:5,6');
             $table->timestamps();
         });
     }

@@ -43,3 +43,8 @@ Route::resource('subjects', App\Http\Controllers\SubjectController::class)->midd
 Route::resource('semesters', App\Http\Controllers\SemesterController::class)->middleware('auth');
 Route::resource('modules', App\Http\Controllers\ModuleController::class)->middleware('auth');
 Route::resource('section', App\Http\Controllers\SectionController::class)->middleware('auth');
+Route::resource('pagos', App\Http\Controllers\PagoController::class)->middleware('auth');
+Route::resource('matricula', App\Http\Controllers\MatriculaController::class)->middleware('auth');
+Route::resource('estmatri', App\Http\Controllers\EstmatriController::class)->middleware('auth');
+Route::resource('estdoc', App\Http\Controllers\EstdocController::class)->middleware('auth');
+Route::resource('docmate', App\Http\Controllers\DocmateController::class)->middleware('auth');

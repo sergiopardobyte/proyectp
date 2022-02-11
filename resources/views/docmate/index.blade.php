@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Semester
+    Docmate
 @endsection
 
 @section('content')
@@ -13,11 +13,11 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Semester') }}
+                                {{ __('Docmate') }}
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('semesters.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('docmates.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
                               </div>
@@ -34,24 +34,26 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                      
                                         
-										<th>Nivel</th>
+                                        
+										<th>Teacher Id</th>
+										<th>Subject Id</th>
 
                                         <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($semesters as $semester)
+                                    @foreach ($docmates as $docmate)
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $semester->nivel }}</td>
+											<td>{{ $docmate->teacher_id }}</td>
+											<td>{{ $docmate->subject_id }}</td>
 
                                             <td>
-                                                <form action="{{ route('semesters.destroy',$semester->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('semesters.show',$semester->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('semesters.edit',$semester->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                <form action="{{ route('docmates.destroy',$docmate->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('docmates.show',$docmate->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('docmates.edit',$docmate->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
@@ -64,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $semesters->links() !!}
+                {!! $docmates->links() !!}
             </div>
         </div>
     </div>

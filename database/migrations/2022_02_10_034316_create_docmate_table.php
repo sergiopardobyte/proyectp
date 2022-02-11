@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSubjectsTable extends Migration
+class CreateDocmateTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateSubjectsTable extends Migration
      */
     public function up()
     {
-        Schema::create('subjects', function (Blueprint $table) {
+        Schema::create('docmate', function (Blueprint $table) {
             $table->id();
-            $table->string('name_s');
-            $table->integer('duration_s');
-            $table->bigInteger('career_id')->unsigned();
+            $table->bigInteger('teacher_id')->unsigned();
+            $table->bigInteger('subject_id')->unsigned();
             $table->timestamps();
-            $table->foreign('career_id')->references('id')->on('careers');
+            $table->foreign('teacher_id')->references('id')->on('teachers');
+            $table->foreign('subject_id')->references('id')->on('subjects');
         });
     }
 
@@ -30,6 +30,6 @@ class CreateSubjectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('subjects');
+        Schema::dropIfExists('docmate');
     }
 }
